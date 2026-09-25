@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schwatz Lux — Reset your password</title>
+    <style>
+      :root {
+        --cream: #f7f1e1;
+        --ink: #1a1a1a;
+        --flag-blue: #00a3e0;
+        --flag-blue-text: #0077a8;
+        --danger-red: #c0392b;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--cream);
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        color: var(--ink);
+        padding: 24px;
+      }
+      .card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 32px 28px;
+        max-width: 380px;
+        width: 100%;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+      h1 {
+        font-size: 22px;
+        margin: 0 0 8px;
+      }
+      p.subtitle {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.4;
+        margin: 0 0 24px;
+      }
+      label {
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+      input[type="password"] {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1.5px solid #ddd;
+        border-radius: 10px;
+        font-size: 15px;
+        margin-bottom: 16px;
+        background: #f8f9fa;
+      }
+      button {
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: 12px;
+        background: var(--flag-blue);
+        color: #fff;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      button:disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+      .message {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-top: 16px;
+        text-align: center;
+      }
+      .message.error {
+        color: var(--danger-red);
+      }
+      .message.success {
+        color: #2f9e44;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div id="loadingState">
+        <h1>Verifying link…</h1>
+        <p class="subtitle">Please wait a moment.</p>
+      </div>
+
+      <div id="invalidState" class="hidden">
+        <h1>Link expired or invalid</h1>
+        <p class="subtitle">
+          This password reset link is no longer valid. Please request a new one
+          from the Schwatz Lux app.
+        </p>
+      </div>
+
+      <div id="formState" class="hidden">
+        <h1>Set a new password</h1>
+        <p class="subtitle">
+          Choose a new password for your Schwatz Lux account.
+        </p>
+
+        <form id="resetForm">
+          <label for="password">New password</label>
+          <input
+            type="password"
+            id="password"
+            minlength="6"
+            required
+            autocomplete="new-password"
+          />
+
+          <label for="confirmPassword">Confirm new password</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            minlength="6"
+            required
+            autocomplete="new-password"
+          />
+
+          <button type="submit" id="submitBtn">Update password</button>
+        </form>
+        <div id="formMessage" class="message hidden"></div>
+      </div>
+
+      <div id="doneState" class="hidden">
+        <h1>Password updated</h1>
+        <p class="subtitle">
+          Your password has been changed. You can now go back to the Schwatz Lux
+          app and sign in.
+        </p>
+      </div>
+    </div>
+
+    <script type="module">
+      import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+
+      // --- Fill these in with your project's own values ---
+      // The anon key is safe to expose publicly — it relies on your Supabase
+      // Row Level Security policies for actual data protection, not secrecy.
+      const SUPABASE_URL = "https://pqbibipzkybzzvlwtych.supabase.co";
+      const SUPABASE_ANON_KEY =
+        "sb_publishable_jE1KcImOqxVo7aRAGLVTvg_fnFafQb6";
+      // -----------------------------------------------------
+
+      const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+      const loadingState = document.getElementById("loadingState");
+      const invalidState = document.getElementById("invalidState");
+      const formState = document.getElementById("formState");
+      const doneState = document.getElementById("doneState");
+      const form = document.getElementById("resetForm");
+      const submitBtn = document.getElementById("submitBtn");
+      const formMessage = document.getElementById("formMessage");
+
+      function showOnly(el) {
+        [loadingState, invalidState, formState, doneState].forEach((s) =>
+          s.classList.add("hidden"),
+        );
+        el.classList.remove("hidden");
+      }
+
+      // Supabase's recovery link carries the token in the URL hash and is
+      // exchanged automatically on load (detectSessionInUrl defaults to true).
+      // We just wait for the PASSWORD_RECOVERY event to know it succeeded.
+      let recoveryReady = false;
+
+      supabase.auth.onAuthStateChange((event) => {
+        if (event === "PASSWORD_RECOVERY") {
+          recoveryReady = true;
+          showOnly(formState);
+        }
+      });
+
+      // Fallback: if no PASSWORD_RECOVERY event fires shortly after load,
+      // the link was likely already used, expired, or malformed.
+      setTimeout(() => {
+        if (!recoveryReady) {
+          showOnly(invalidState);
+        }
+      }, 4000);
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        formMessage.classList.add("hidden");
+
+        const password = document.getElementById("password").value;
+        const confirmPassword =
+          document.getElementById("confirmPassword").value;
+
+        if (password.length < 6) {
+          formMessage.textContent = "Password must be at least 6 characters.";
+          formMessage.className = "message error";
+          return;
+        }
+        if (password !== confirmPassword) {
+          formMessage.textContent = "Passwords do not match.";
+          formMessage.className = "message error";
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Updating…";
+
+        const { error } = await supabase.auth.updateUser({ password });
+
+        if (error) {
+          formMessage.textContent =
+            error.message || "Something went wrong. Please try again.";
+          formMessage.className = "message error";
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Update password";
+          return;
+        }
+
+        showOnly(doneState);
+      });
+    </script>
+  </body>
+</html>
