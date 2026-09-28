@@ -1,15 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Schwatz Lux — Reset your password</title>
+    <title>Password reset</title>
     <style>
       :root {
         --cream: #f7f1e1;
         --ink: #1a1a1a;
         --flag-blue: #00a3e0;
-        --flag-blue-text: #0077a8;
         --danger-red: #c0392b;
       }
       * {
@@ -85,9 +84,6 @@
       .message.error {
         color: var(--danger-red);
       }
-      .message.success {
-        color: #2f9e44;
-      }
       .hidden {
         display: none;
       }
@@ -96,26 +92,21 @@
   <body>
     <div class="card">
       <div id="loadingState">
-        <h1>Verifying link…</h1>
-        <p class="subtitle">Please wait a moment.</p>
+        <h1 data-i18n="verifying_title"></h1>
+        <p class="subtitle" data-i18n="verifying_sub"></p>
       </div>
 
       <div id="invalidState" class="hidden">
-        <h1>Link expired or invalid</h1>
-        <p class="subtitle">
-          This password reset link is no longer valid. Please request a new one
-          from the Schwatz Lux app.
-        </p>
+        <h1 data-i18n="invalid_title"></h1>
+        <p class="subtitle" data-i18n="invalid_body"></p>
       </div>
 
       <div id="formState" class="hidden">
-        <h1>Set a new password</h1>
-        <p class="subtitle">
-          Choose a new password for your Schwatz Lux account.
-        </p>
+        <h1 data-i18n="form_title"></h1>
+        <p class="subtitle" data-i18n="form_sub"></p>
 
         <form id="resetForm">
-          <label for="password">New password</label>
+          <label for="password" data-i18n="new_password"></label>
           <input
             type="password"
             id="password"
@@ -124,7 +115,7 @@
             autocomplete="new-password"
           />
 
-          <label for="confirmPassword">Confirm new password</label>
+          <label for="confirmPassword" data-i18n="confirm_password"></label>
           <input
             type="password"
             id="confirmPassword"
@@ -133,17 +124,14 @@
             autocomplete="new-password"
           />
 
-          <button type="submit" id="submitBtn">Update password</button>
+          <button type="submit" id="submitBtn" data-i18n="submit"></button>
         </form>
         <div id="formMessage" class="message hidden"></div>
       </div>
 
       <div id="doneState" class="hidden">
-        <h1>Password updated</h1>
-        <p class="subtitle">
-          Your password has been changed. You can now go back to the Schwatz Lux
-          app and sign in.
-        </p>
+        <h1 data-i18n="done_title"></h1>
+        <p class="subtitle" data-i18n="done_body"></p>
       </div>
     </div>
 
@@ -157,6 +145,105 @@
       const SUPABASE_ANON_KEY =
         "sb_publishable_jE1KcImOqxVo7aRAGLVTvg_fnFafQb6";
       // -----------------------------------------------------
+
+      const TRANSLATIONS = {
+        en: {
+          verifying_title: "Verifying link…",
+          verifying_sub: "Please wait a moment.",
+          invalid_title: "Link expired or invalid",
+          invalid_body:
+            "This password reset link is no longer valid. Please request a new one from the app.",
+          form_title: "Set a new password",
+          form_sub: "Choose a new password for your account.",
+          new_password: "New password",
+          confirm_password: "Confirm new password",
+          submit: "Update password",
+          updating: "Updating…",
+          too_short: "Password must be at least 6 characters.",
+          mismatch: "Passwords do not match.",
+          generic_error: "Something went wrong. Please try again.",
+          done_title: "Password updated",
+          done_body:
+            "Your password has been changed. You can now go back to the app and sign in.",
+        },
+        fr: {
+          verifying_title: "Vérification du lien…",
+          verifying_sub: "Veuillez patienter un instant.",
+          invalid_title: "Lien expiré ou invalide",
+          invalid_body:
+            "Ce lien de réinitialisation n'est plus valide. Veuillez en demander un nouveau depuis l'application.",
+          form_title: "Définir un nouveau mot de passe",
+          form_sub: "Choisissez un nouveau mot de passe pour votre compte.",
+          new_password: "Nouveau mot de passe",
+          confirm_password: "Confirmez le nouveau mot de passe",
+          submit: "Mettre à jour le mot de passe",
+          updating: "Mise à jour…",
+          too_short: "Le mot de passe doit contenir au moins 6 caractères.",
+          mismatch: "Les mots de passe ne correspondent pas.",
+          generic_error: "Une erreur est survenue. Veuillez réessayer.",
+          done_title: "Mot de passe mis à jour",
+          done_body:
+            "Votre mot de passe a été modifié. Vous pouvez maintenant retourner dans l'application et vous connecter.",
+        },
+        de: {
+          verifying_title: "Link wird überprüft…",
+          verifying_sub: "Bitte einen Moment warten.",
+          invalid_title: "Link abgelaufen oder ungültig",
+          invalid_body:
+            "Dieser Link zum Zurücksetzen des Passworts ist nicht mehr gültig. Bitte fordere in der App einen neuen an.",
+          form_title: "Neues Passwort festlegen",
+          form_sub: "Wähle ein neues Passwort für dein Konto.",
+          new_password: "Neues Passwort",
+          confirm_password: "Neues Passwort bestätigen",
+          submit: "Passwort aktualisieren",
+          updating: "Wird aktualisiert…",
+          too_short: "Das Passwort muss mindestens 6 Zeichen lang sein.",
+          mismatch: "Die Passwörter stimmen nicht überein.",
+          generic_error: "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+          done_title: "Passwort aktualisiert",
+          done_body:
+            "Dein Passwort wurde geändert. Du kannst jetzt zur App zurückkehren und dich anmelden.",
+        },
+        lb: {
+          verifying_title: "Link gëtt iwwerpréift…",
+          verifying_sub: "Waart w.e.g. e Moment.",
+          invalid_title: "Link ofgelaf oder ongëlteg",
+          invalid_body:
+            "Dësen Link fir d'Passwuert zréckzesetzen ass net méi gëlteg. Frot w.e.g. an der App en neien un.",
+          form_title: "Neit Passwuert festleeën",
+          form_sub: "Wielt en neit Passwuert fir Äert Konto.",
+          new_password: "Neit Passwuert",
+          confirm_password: "Neit Passwuert confirméieren",
+          submit: "Passwuert aktualiséieren",
+          updating: "Gëtt aktualiséiert…",
+          too_short: "D'Passwuert muss mindestens 6 Zeechen hunn.",
+          mismatch: "D'Passwierder stëmmen net iwwereneen.",
+          generic_error:
+            "Et ass eppes schifgaangen. Probéiert w.e.g. nach eng Kéier.",
+          done_title: "Passwuert aktualiséiert",
+          done_body:
+            "Äert Passwuert gouf geännert. Dir kënnt elo zréck an d'App goen an iech umellen.",
+        },
+      };
+
+      // Language priority: ?lang= from the link (set by the app at request time),
+      // then the browser's own language, then French (the app's default).
+      function resolveLanguage() {
+        const fromLink = new URLSearchParams(window.location.search).get(
+          "lang",
+        );
+        if (fromLink && TRANSLATIONS[fromLink]) return fromLink;
+        const fromBrowser = (navigator.language || "").split("-")[0];
+        if (TRANSLATIONS[fromBrowser]) return fromBrowser;
+        return "fr";
+      }
+
+      const lang = resolveLanguage();
+      const strings = TRANSLATIONS[lang];
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        el.textContent = strings[el.dataset.i18n];
+      });
 
       const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
@@ -175,6 +262,11 @@
         el.classList.remove("hidden");
       }
 
+      function showFormError(text) {
+        formMessage.textContent = text;
+        formMessage.className = "message error";
+      }
+
       // Supabase's recovery link carries the token in the URL hash and is
       // exchanged automatically on load (detectSessionInUrl defaults to true).
       // We just wait for the PASSWORD_RECOVERY event to know it succeeded.
@@ -190,9 +282,7 @@
       // Fallback: if no PASSWORD_RECOVERY event fires shortly after load,
       // the link was likely already used, expired, or malformed.
       setTimeout(() => {
-        if (!recoveryReady) {
-          showOnly(invalidState);
-        }
+        if (!recoveryReady) showOnly(invalidState);
       }, 4000);
 
       form.addEventListener("submit", async (e) => {
@@ -203,28 +293,22 @@
         const confirmPassword =
           document.getElementById("confirmPassword").value;
 
-        if (password.length < 6) {
-          formMessage.textContent = "Password must be at least 6 characters.";
-          formMessage.className = "message error";
-          return;
-        }
-        if (password !== confirmPassword) {
-          formMessage.textContent = "Passwords do not match.";
-          formMessage.className = "message error";
-          return;
-        }
+        if (password.length < 6) return showFormError(strings.too_short);
+        if (password !== confirmPassword)
+          return showFormError(strings.mismatch);
 
         submitBtn.disabled = true;
-        submitBtn.textContent = "Updating…";
+        submitBtn.textContent = strings.updating;
 
         const { error } = await supabase.auth.updateUser({ password });
 
         if (error) {
-          formMessage.textContent =
-            error.message || "Something went wrong. Please try again.";
-          formMessage.className = "message error";
+          // Supabase's own messages are English-only, so show a localized
+          // generic message and keep the raw one in the console for debugging.
+          console.warn("updateUser failed:", error.message);
+          showFormError(strings.generic_error);
           submitBtn.disabled = false;
-          submitBtn.textContent = "Update password";
+          submitBtn.textContent = strings.submit;
           return;
         }
 
