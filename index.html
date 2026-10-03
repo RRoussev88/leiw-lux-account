@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Password reset</title>
+    <title>Réinitialisation du mot de passe</title>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
     <style>
       :root {
         --cream: #f7f1e1;
@@ -148,6 +149,7 @@
 
       const TRANSLATIONS = {
         en: {
+          page_title: "Password reset",
           verifying_title: "Verifying link…",
           verifying_sub: "Please wait a moment.",
           invalid_title: "Link expired or invalid",
@@ -167,6 +169,7 @@
             "Your password has been changed. You can now go back to the app and sign in.",
         },
         fr: {
+          page_title: "Réinitialisation du mot de passe",
           verifying_title: "Vérification du lien…",
           verifying_sub: "Veuillez patienter un instant.",
           invalid_title: "Lien expiré ou invalide",
@@ -186,6 +189,7 @@
             "Votre mot de passe a été modifié. Vous pouvez maintenant retourner dans l'application et vous connecter.",
         },
         de: {
+          page_title: "Passwort zurücksetzen",
           verifying_title: "Link wird überprüft…",
           verifying_sub: "Bitte einen Moment warten.",
           invalid_title: "Link abgelaufen oder ungültig",
@@ -205,6 +209,7 @@
             "Dein Passwort wurde geändert. Du kannst jetzt zur App zurückkehren und dich anmelden.",
         },
         lb: {
+          page_title: "Passwuert zerécksetzen",
           verifying_title: "Link gëtt iwwerpréift…",
           verifying_sub: "Waart w.e.g. e Moment.",
           invalid_title: "Link ofgelaf oder ongëlteg",
@@ -244,6 +249,8 @@
       document.querySelectorAll("[data-i18n]").forEach((el) => {
         el.textContent = strings[el.dataset.i18n];
       });
+
+      document.title = strings.page_title;
 
       const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
