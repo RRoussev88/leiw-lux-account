@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Réinitialisation du mot de passe</title>
-    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <style>
       :root {
         --cream: #f7f1e1;
@@ -263,9 +263,9 @@
       const formMessage = document.getElementById("formMessage");
 
       function showOnly(el) {
-        [loadingState, invalidState, formState, doneState].forEach((s) =>
-          s.classList.add("hidden"),
-        );
+        [loadingState, invalidState, formState, doneState].forEach((s) => {
+          s.classList.add("hidden");
+        });
         el.classList.remove("hidden");
       }
 
