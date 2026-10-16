@@ -1,0 +1,50 @@
+{
+  "site": {
+    "name": "Léiw Lux",
+    "skip": "Aller au contenu",
+    "lang_label": "Langue",
+    "copyright": "© 2026 Léiw Lux"
+  },
+  "meta": {
+    "home": {
+      "title": "Léiw Lux – Apprendre le luxembourgeois",
+      "description": "Léiw Lux est une application pour apprendre le luxembourgeois à votre rythme : leçons, exercices, séries quotidiennes et classement entre amis."
+    },
+    "password": {
+      "title": "Réinitialiser le mot de passe – Léiw Lux",
+      "description": "Choisissez un nouveau mot de passe pour votre compte Léiw Lux."
+    },
+    "notfound": {
+      "title": "Page introuvable – Léiw Lux",
+      "description": "Cette page n'existe pas."
+    }
+  },
+  "home": {
+    "tagline": "Apprenez le luxembourgeois, un jour à la fois.",
+    "lead": "Des leçons et des exercices à votre rythme, des séries quotidiennes pour garder le cap et un classement entre amis.",
+    "mascot_alt": "La mascotte de Léiw Lux : un lion couronné qui salue de la patte."
+  },
+  "password": {
+    "verifying_title": "Vérification du lien…",
+    "verifying_sub": "Veuillez patienter un instant.",
+    "invalid_title": "Lien expiré ou invalide",
+    "invalid_body": "Ce lien de réinitialisation n'est plus valide. Veuillez en demander un nouveau depuis l'application.",
+    "form_title": "Définir un nouveau mot de passe",
+    "form_sub": "Choisissez un nouveau mot de passe pour votre compte.",
+    "new_password": "Nouveau mot de passe",
+    "confirm_password": "Confirmez le nouveau mot de passe",
+    "submit": "Mettre à jour le mot de passe",
+    "updating": "Mise à jour…",
+    "too_short": "Le mot de passe doit contenir au moins 6 caractères.",
+    "mismatch": "Les mots de passe ne correspondent pas.",
+    "generic_error": "Une erreur est survenue. Veuillez réessayer.",
+    "done_title": "Mot de passe mis à jour",
+    "done_body": "Votre mot de passe a été modifié. Vous pouvez maintenant retourner dans l'application et vous connecter.",
+    "noscript": "Cette page nécessite JavaScript pour fonctionner."
+  },
+  "notfound": {
+    "title": "Page introuvable",
+    "body": "Cette page n'existe pas ou a été déplacée.",
+    "cta": "Retour à l'accueil"
+  }
+}

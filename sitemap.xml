@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://leiwlux.com/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://leiwlux.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://leiwlux.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://leiwlux.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="lb" href="https://leiwlux.com/lb/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://leiwlux.com/"/>
+  </url>
+  <url>
+    <loc>https://leiwlux.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://leiwlux.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://leiwlux.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://leiwlux.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="lb" href="https://leiwlux.com/lb/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://leiwlux.com/"/>
+  </url>
+  <url>
+    <loc>https://leiwlux.com/de/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://leiwlux.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://leiwlux.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://leiwlux.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="lb" href="https://leiwlux.com/lb/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://leiwlux.com/"/>
+  </url>
+  <url>
+    <loc>https://leiwlux.com/lb/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://leiwlux.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://leiwlux.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://leiwlux.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="lb" href="https://leiwlux.com/lb/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://leiwlux.com/"/>
+  </url>
+</urlset>

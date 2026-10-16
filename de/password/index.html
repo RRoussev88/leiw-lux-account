@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src https://pqbibipzkybzzvlwtych.supabase.co; base-uri 'none'; form-action 'self'">
+<meta name="referrer" content="same-origin">
+<title>Passwort zurücksetzen – Léiw Lux</title>
+<meta name="description" content="Wähle ein neues Passwort für dein Léiw-Lux-Konto.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://leiwlux.com/de/password/">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#F7F1E1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Léiw Lux">
+<meta property="og:title" content="Passwort zurücksetzen – Léiw Lux">
+<meta property="og:description" content="Wähle ein neues Passwort für dein Léiw-Lux-Konto.">
+<meta property="og:url" content="https://leiwlux.com/de/password/">
+<meta property="og:image" content="https://leiwlux.com/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body data-page="password">
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<div class="flag-band" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/de/">
+      <img src="/assets/img/logo-96.png" width="40" height="40" alt="">
+      <span>Léiw Lux</span>
+    </a>
+    <nav class="lang" aria-label="Sprache"><ul><li><a href="/fr/password/" hreflang="fr" lang="fr" data-lang="fr" aria-label="Français" title="Français">FR</a></li><li><a href="/en/password/" hreflang="en" lang="en" data-lang="en" aria-label="English" title="English">EN</a></li><li><a href="/de/password/" hreflang="de" lang="de" data-lang="de" aria-label="Deutsch" title="Deutsch" aria-current="true">DE</a></li><li><a href="/lb/password/" hreflang="lb" lang="lb" data-lang="lb" aria-label="Lëtzebuergesch" title="Lëtzebuergesch">LB</a></li></ul></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<section class="card narrow">
+  <div id="loadingState">
+    <h1 tabindex="-1">Link wird überprüft…</h1>
+    <p class="subtitle">Bitte einen Moment warten.</p>
+  </div>
+
+  <div id="invalidState" hidden>
+    <h1 tabindex="-1">Link abgelaufen oder ungültig</h1>
+    <p class="subtitle">Dieser Link zum Zurücksetzen des Passworts ist nicht mehr gültig. Bitte fordere in der App einen neuen an.</p>
+  </div>
+
+  <div id="formState" hidden>
+    <h1 tabindex="-1">Neues Passwort festlegen</h1>
+    <p class="subtitle">Wähle ein neues Passwort für dein Konto.</p>
+    <form id="resetForm" novalidate>
+      <label for="password">Neues Passwort</label>
+      <input type="password" id="password" name="password" minlength="6" required autocomplete="new-password">
+
+      <label for="confirmPassword">Neues Passwort bestätigen</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" minlength="6" required autocomplete="new-password">
+
+      <button type="submit" id="submitBtn" class="btn">Passwort aktualisieren</button>
+    </form>
+    <p id="formMessage" class="message error" role="alert" hidden></p>
+  </div>
+
+  <div id="doneState" hidden>
+    <h1 tabindex="-1">Passwort aktualisiert</h1>
+    <p class="subtitle">Dein Passwort wurde geändert. Du kannst jetzt zur App zurückkehren und dich anmelden.</p>
+  </div>
+
+  <noscript><p class="message error">Diese Seite benötigt JavaScript.</p></noscript>
+</section>
+<script type="application/json" id="page-data">{"config":{"supabaseUrl":"https://pqbibipzkybzzvlwtych.supabase.co","supabaseAnonKey":"sb_publishable_jE1KcImOqxVo7aRAGLVTvg_fnFafQb6"},"strings":{"too_short":"Das Passwort muss mindestens 6 Zeichen lang sein.","mismatch":"Die Passwörter stimmen nicht überein.","generic_error":"Etwas ist schiefgelaufen. Bitte versuche es erneut.","updating":"Wird aktualisiert…","submit":"Passwort aktualisieren"}}</script>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Léiw Lux</p>
+  </div>
+</footer>
+<script src="/assets/js/site.js" defer></script>
+<script src="/assets/vendor/supabase-js-2.117.2.umd.js" defer></script>
+<script src="/assets/js/password.js" defer></script>
+</body>
+</html>

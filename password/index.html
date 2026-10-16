@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-8Htrm+jVdALcxJfV3gOpn3jFrWxQaTTV6uh5mVyM9jY='; style-src 'self'; img-src 'self'; font-src 'self'; connect-src https://pqbibipzkybzzvlwtych.supabase.co; base-uri 'none'; form-action 'self'">
+<meta name="referrer" content="same-origin">
+<title>Réinitialiser le mot de passe – Léiw Lux</title>
+<meta name="description" content="Choisissez un nouveau mot de passe pour votre compte Léiw Lux.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://leiwlux.com/password/">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#F7F1E1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Léiw Lux">
+<meta property="og:title" content="Réinitialiser le mot de passe – Léiw Lux">
+<meta property="og:description" content="Choisissez un nouveau mot de passe pour votre compte Léiw Lux.">
+<meta property="og:url" content="https://leiwlux.com/password/">
+<meta property="og:image" content="https://leiwlux.com/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script>(function(){var L=["fr","en","de","lb"],w=window.location,s=w.search,h=w.hash;var p=null,m=/[?&]lang=(fr|en|de|lb)(&|$)/.exec(s);if(m)p=m[1];if(!p){try{var v=localStorage.getItem("ll_lang");if(L.indexOf(v)>-1)p=v}catch(e){}}if(!p){var n=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||""];for(var i=0;i<n.length&&!p;i++){var c=String(n[i]).toLowerCase().split("-")[0];if(c==="ltz")c="lb";if(L.indexOf(c)>-1)p=c}}if(p)w.replace("/"+p+"/password/"+s+h)})();</script>
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body data-page="password">
+<a class="skip-link" href="#main">Aller au contenu</a>
+<div class="flag-band" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/fr/">
+      <img src="/assets/img/logo-96.png" width="40" height="40" alt="">
+      <span>Léiw Lux</span>
+    </a>
+    <nav class="lang" aria-label="Langue"><ul><li><a href="/fr/password/" hreflang="fr" lang="fr" data-lang="fr" aria-label="Français" title="Français" aria-current="true">FR</a></li><li><a href="/en/password/" hreflang="en" lang="en" data-lang="en" aria-label="English" title="English">EN</a></li><li><a href="/de/password/" hreflang="de" lang="de" data-lang="de" aria-label="Deutsch" title="Deutsch">DE</a></li><li><a href="/lb/password/" hreflang="lb" lang="lb" data-lang="lb" aria-label="Lëtzebuergesch" title="Lëtzebuergesch">LB</a></li></ul></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<section class="card narrow">
+  <div id="loadingState">
+    <h1 tabindex="-1">Vérification du lien…</h1>
+    <p class="subtitle">Veuillez patienter un instant.</p>
+  </div>
+
+  <div id="invalidState" hidden>
+    <h1 tabindex="-1">Lien expiré ou invalide</h1>
+    <p class="subtitle">Ce lien de réinitialisation n'est plus valide. Veuillez en demander un nouveau depuis l'application.</p>
+  </div>
+
+  <div id="formState" hidden>
+    <h1 tabindex="-1">Définir un nouveau mot de passe</h1>
+    <p class="subtitle">Choisissez un nouveau mot de passe pour votre compte.</p>
+    <form id="resetForm" novalidate>
+      <label for="password">Nouveau mot de passe</label>
+      <input type="password" id="password" name="password" minlength="6" required autocomplete="new-password">
+
+      <label for="confirmPassword">Confirmez le nouveau mot de passe</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" minlength="6" required autocomplete="new-password">
+
+      <button type="submit" id="submitBtn" class="btn">Mettre à jour le mot de passe</button>
+    </form>
+    <p id="formMessage" class="message error" role="alert" hidden></p>
+  </div>
+
+  <div id="doneState" hidden>
+    <h1 tabindex="-1">Mot de passe mis à jour</h1>
+    <p class="subtitle">Votre mot de passe a été modifié. Vous pouvez maintenant retourner dans l'application et vous connecter.</p>
+  </div>
+
+  <noscript><p class="message error">Cette page nécessite JavaScript pour fonctionner.</p></noscript>
+</section>
+<script type="application/json" id="page-data">{"config":{"supabaseUrl":"https://pqbibipzkybzzvlwtych.supabase.co","supabaseAnonKey":"sb_publishable_jE1KcImOqxVo7aRAGLVTvg_fnFafQb6"},"strings":{"too_short":"Le mot de passe doit contenir au moins 6 caractères.","mismatch":"Les mots de passe ne correspondent pas.","generic_error":"Une erreur est survenue. Veuillez réessayer.","updating":"Mise à jour…","submit":"Mettre à jour le mot de passe"}}</script>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Léiw Lux</p>
+  </div>
+</footer>
+<script src="/assets/js/site.js" defer></script>
+<script src="/assets/vendor/supabase-js-2.117.2.umd.js" defer></script>
+<script src="/assets/js/password.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{
+  "site": {
+    "name": "Léiw Lux",
+    "skip": "Zum Inhalt springen",
+    "lang_label": "Sprache",
+    "copyright": "© 2026 Léiw Lux"
+  },
+  "meta": {
+    "home": {
+      "title": "Léiw Lux – Luxemburgisch lernen",
+      "description": "Léiw Lux ist eine App zum Luxemburgisch-Lernen in deinem Tempo: Lektionen, Übungen, tägliche Serien und eine Bestenliste mit Freunden."
+    },
+    "password": {
+      "title": "Passwort zurücksetzen – Léiw Lux",
+      "description": "Wähle ein neues Passwort für dein Léiw-Lux-Konto."
+    },
+    "notfound": {
+      "title": "Seite nicht gefunden – Léiw Lux",
+      "description": "Diese Seite gibt es nicht."
+    }
+  },
+  "home": {
+    "tagline": "Lerne Luxemburgisch, Tag für Tag.",
+    "lead": "Lektionen und Übungen in deinem Tempo, tägliche Serien zum Dranbleiben und eine Bestenliste mit Freunden.",
+    "mascot_alt": "Das Maskottchen von Léiw Lux: ein gekrönter Löwe, der winkt."
+  },
+  "password": {
+    "verifying_title": "Link wird überprüft…",
+    "verifying_sub": "Bitte einen Moment warten.",
+    "invalid_title": "Link abgelaufen oder ungültig",
+    "invalid_body": "Dieser Link zum Zurücksetzen des Passworts ist nicht mehr gültig. Bitte fordere in der App einen neuen an.",
+    "form_title": "Neues Passwort festlegen",
+    "form_sub": "Wähle ein neues Passwort für dein Konto.",
+    "new_password": "Neues Passwort",
+    "confirm_password": "Neues Passwort bestätigen",
+    "submit": "Passwort aktualisieren",
+    "updating": "Wird aktualisiert…",
+    "too_short": "Das Passwort muss mindestens 6 Zeichen lang sein.",
+    "mismatch": "Die Passwörter stimmen nicht überein.",
+    "generic_error": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+    "done_title": "Passwort aktualisiert",
+    "done_body": "Dein Passwort wurde geändert. Du kannst jetzt zur App zurückkehren und dich anmelden.",
+    "noscript": "Diese Seite benötigt JavaScript."
+  },
+  "notfound": {
+    "title": "Seite nicht gefunden",
+    "body": "Diese Seite gibt es nicht oder sie wurde verschoben.",
+    "cta": "Zurück zur Startseite"
+  }
+}

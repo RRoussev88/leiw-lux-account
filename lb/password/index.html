@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="lb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src https://pqbibipzkybzzvlwtych.supabase.co; base-uri 'none'; form-action 'self'">
+<meta name="referrer" content="same-origin">
+<title>Passwuert zrécksetzen – Léiw Lux</title>
+<meta name="description" content="Wielt en neit Passwuert fir Äert Léiw-Lux-Konto.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://leiwlux.com/lb/password/">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#F7F1E1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Léiw Lux">
+<meta property="og:title" content="Passwuert zrécksetzen – Léiw Lux">
+<meta property="og:description" content="Wielt en neit Passwuert fir Äert Léiw-Lux-Konto.">
+<meta property="og:url" content="https://leiwlux.com/lb/password/">
+<meta property="og:image" content="https://leiwlux.com/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body data-page="password">
+<a class="skip-link" href="#main">Direkt zum Inhalt</a>
+<div class="flag-band" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/lb/">
+      <img src="/assets/img/logo-96.png" width="40" height="40" alt="">
+      <span>Léiw Lux</span>
+    </a>
+    <nav class="lang" aria-label="Sprooch"><ul><li><a href="/fr/password/" hreflang="fr" lang="fr" data-lang="fr" aria-label="Français" title="Français">FR</a></li><li><a href="/en/password/" hreflang="en" lang="en" data-lang="en" aria-label="English" title="English">EN</a></li><li><a href="/de/password/" hreflang="de" lang="de" data-lang="de" aria-label="Deutsch" title="Deutsch">DE</a></li><li><a href="/lb/password/" hreflang="lb" lang="lb" data-lang="lb" aria-label="Lëtzebuergesch" title="Lëtzebuergesch" aria-current="true">LB</a></li></ul></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<section class="card narrow">
+  <div id="loadingState">
+    <h1 tabindex="-1">Link gëtt iwwerpréift…</h1>
+    <p class="subtitle">Waart w.e.g. e Moment.</p>
+  </div>
+
+  <div id="invalidState" hidden>
+    <h1 tabindex="-1">Link ofgelaf oder ongëlteg</h1>
+    <p class="subtitle">Dësen Link fir d'Passwuert zréckzesetzen ass net méi gëlteg. Frot w.e.g. an der App en neien un.</p>
+  </div>
+
+  <div id="formState" hidden>
+    <h1 tabindex="-1">Neit Passwuert festleeën</h1>
+    <p class="subtitle">Wielt en neit Passwuert fir Äert Konto.</p>
+    <form id="resetForm" novalidate>
+      <label for="password">Neit Passwuert</label>
+      <input type="password" id="password" name="password" minlength="6" required autocomplete="new-password">
+
+      <label for="confirmPassword">Neit Passwuert confirméieren</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" minlength="6" required autocomplete="new-password">
+
+      <button type="submit" id="submitBtn" class="btn">Passwuert aktualiséieren</button>
+    </form>
+    <p id="formMessage" class="message error" role="alert" hidden></p>
+  </div>
+
+  <div id="doneState" hidden>
+    <h1 tabindex="-1">Passwuert aktualiséiert</h1>
+    <p class="subtitle">Äert Passwuert gouf geännert. Dir kënnt elo zréck an d'App goen an iech umellen.</p>
+  </div>
+
+  <noscript><p class="message error">Dës Säit brauch JavaScript fir ze funktionéieren.</p></noscript>
+</section>
+<script type="application/json" id="page-data">{"config":{"supabaseUrl":"https://pqbibipzkybzzvlwtych.supabase.co","supabaseAnonKey":"sb_publishable_jE1KcImOqxVo7aRAGLVTvg_fnFafQb6"},"strings":{"too_short":"D'Passwuert muss mindestens 6 Zeechen hunn.","mismatch":"D'Passwierder stëmmen net iwwereneen.","generic_error":"Et ass eppes schifgaangen. Probéiert w.e.g. nach eng Kéier.","updating":"Gëtt aktualiséiert…","submit":"Passwuert aktualiséieren"}}</script>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Léiw Lux</p>
+  </div>
+</footer>
+<script src="/assets/js/site.js" defer></script>
+<script src="/assets/vendor/supabase-js-2.117.2.umd.js" defer></script>
+<script src="/assets/js/password.js" defer></script>
+</body>
+</html>

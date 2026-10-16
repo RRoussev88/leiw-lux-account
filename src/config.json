@@ -1,0 +1,15 @@
+{
+  "siteUrl": "https://leiwlux.com",
+  "languages": ["fr", "en", "de", "lb"],
+  "defaultLanguage": "fr",
+  "languageNames": {
+    "fr": "Français",
+    "en": "English",
+    "de": "Deutsch",
+    "lb": "Lëtzebuergesch"
+  },
+  "supabaseUrl": "https://pqbibipzkybzzvlwtych.supabase.co",
+  "supabaseAnonKey": "sb_publishable_jE1KcImOqxVo7aRAGLVTvg_fnFafQb6",
+  "supabaseJs": "/assets/vendor/supabase-js-2.117.2.umd.js",
+  "ogImage": "/assets/img/og-image.png"
+}

@@ -1,0 +1,50 @@
+{
+  "site": {
+    "name": "Léiw Lux",
+    "skip": "Skip to content",
+    "lang_label": "Language",
+    "copyright": "© 2026 Léiw Lux"
+  },
+  "meta": {
+    "home": {
+      "title": "Léiw Lux – Learn Luxembourgish",
+      "description": "Léiw Lux is an app for learning Luxembourgish at your own pace: lessons, exercises, daily streaks and a leaderboard with friends."
+    },
+    "password": {
+      "title": "Reset your password – Léiw Lux",
+      "description": "Choose a new password for your Léiw Lux account."
+    },
+    "notfound": {
+      "title": "Page not found – Léiw Lux",
+      "description": "This page does not exist."
+    }
+  },
+  "home": {
+    "tagline": "Learn Luxembourgish, one day at a time.",
+    "lead": "Lessons and exercises at your own pace, daily streaks to keep you going, and a leaderboard to share with friends.",
+    "mascot_alt": "The Léiw Lux mascot: a crowned lion waving."
+  },
+  "password": {
+    "verifying_title": "Verifying link…",
+    "verifying_sub": "Please wait a moment.",
+    "invalid_title": "Link expired or invalid",
+    "invalid_body": "This password reset link is no longer valid. Please request a new one from the app.",
+    "form_title": "Set a new password",
+    "form_sub": "Choose a new password for your account.",
+    "new_password": "New password",
+    "confirm_password": "Confirm new password",
+    "submit": "Update password",
+    "updating": "Updating…",
+    "too_short": "Password must be at least 6 characters.",
+    "mismatch": "Passwords do not match.",
+    "generic_error": "Something went wrong. Please try again.",
+    "done_title": "Password updated",
+    "done_body": "Your password has been changed. You can now go back to the app and sign in.",
+    "noscript": "This page needs JavaScript to work."
+  },
+  "notfound": {
+    "title": "Page not found",
+    "body": "This page does not exist or has been moved.",
+    "cta": "Back to the home page"
+  }
+}

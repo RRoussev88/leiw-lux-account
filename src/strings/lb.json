@@ -1,0 +1,50 @@
+{
+  "site": {
+    "name": "Léiw Lux",
+    "skip": "Direkt zum Inhalt",
+    "lang_label": "Sprooch",
+    "copyright": "© 2026 Léiw Lux"
+  },
+  "meta": {
+    "home": {
+      "title": "Léiw Lux – Lëtzebuergesch léieren",
+      "description": "Léiw Lux ass eng App fir Lëtzebuergesch an Ärem eegenen Tempo ze léieren: Lektiounen, Übungen, deeglech Serien an e Klassement mat Frënn."
+    },
+    "password": {
+      "title": "Passwuert zrécksetzen – Léiw Lux",
+      "description": "Wielt en neit Passwuert fir Äert Léiw-Lux-Konto."
+    },
+    "notfound": {
+      "title": "Säit net fonnt – Léiw Lux",
+      "description": "Dës Säit gëtt et net."
+    }
+  },
+  "home": {
+    "tagline": "Léiert Lëtzebuergesch, Dag fir Dag.",
+    "lead": "Lektiounen an Übungen an Ärem eegenen Tempo, deeglech Serien fir drunzebleiwen an e Klassement mat Frënn.",
+    "mascot_alt": "D'Maskott vu Léiw Lux: e gekréinte Léiw, deen wénkt."
+  },
+  "password": {
+    "verifying_title": "Link gëtt iwwerpréift…",
+    "verifying_sub": "Waart w.e.g. e Moment.",
+    "invalid_title": "Link ofgelaf oder ongëlteg",
+    "invalid_body": "Dësen Link fir d'Passwuert zréckzesetzen ass net méi gëlteg. Frot w.e.g. an der App en neien un.",
+    "form_title": "Neit Passwuert festleeën",
+    "form_sub": "Wielt en neit Passwuert fir Äert Konto.",
+    "new_password": "Neit Passwuert",
+    "confirm_password": "Neit Passwuert confirméieren",
+    "submit": "Passwuert aktualiséieren",
+    "updating": "Gëtt aktualiséiert…",
+    "too_short": "D'Passwuert muss mindestens 6 Zeechen hunn.",
+    "mismatch": "D'Passwierder stëmmen net iwwereneen.",
+    "generic_error": "Et ass eppes schifgaangen. Probéiert w.e.g. nach eng Kéier.",
+    "done_title": "Passwuert aktualiséiert",
+    "done_body": "Äert Passwuert gouf geännert. Dir kënnt elo zréck an d'App goen an iech umellen.",
+    "noscript": "Dës Säit brauch JavaScript fir ze funktionéieren."
+  },
+  "notfound": {
+    "title": "Säit net fonnt",
+    "body": "Dës Säit gëtt et net oder si gouf geréckelt.",
+    "cta": "Zréck op d'Startsäit"
+  }
+}

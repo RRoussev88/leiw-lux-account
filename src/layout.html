@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="{{html_lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="{{csp}}">
+<meta name="referrer" content="same-origin">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+{{robots}}<link rel="canonical" href="{{canonical}}">
+{{alternates}}<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#F7F1E1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Léiw Lux">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:image" content="{{og_image}}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+{{boot}}<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body data-page="{{page_id}}">
+<a class="skip-link" href="#main">{{t:site.skip}}</a>
+<div class="flag-band" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="{{home_href}}">
+      <img src="/assets/img/logo-96.png" width="40" height="40" alt="">
+      <span>{{t:site.name}}</span>
+    </a>
+    {{lang_nav}}
+  </div>
+</header>
+<main id="main" class="wrap">
+{{content}}
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    {{footer_links}}<p>{{t:site.copyright}}</p>
+  </div>
+</footer>
+<script src="/assets/js/site.js" defer></script>
+{{scripts}}</body>
+</html>
