@@ -1,6 +1,5 @@
 // Password reset flow (moved from the old one-page site; behavior unchanged).
-// Supabase's recovery link carries the token in the URL; supabase-js exchanges it on load
-// (detectSessionInUrl defaults to true) and fires PASSWORD_RECOVERY.
+// Handles both link styles: ?token_hash=... (verifyOtp) and the legacy URL-hash token.
 (function () {
   "use strict";
 
@@ -44,18 +43,49 @@
 
   var recoveryReady = false;
 
+  function onRecovery() {
+    recoveryReady = true;
+    showOnly(formState, true);
+  }
+
+  // Legacy links: token in the URL hash, exchanged by supabase-js on load.
   client.auth.onAuthStateChange(function (event) {
-    if (event === "PASSWORD_RECOVERY") {
-      recoveryReady = true;
-      showOnly(formState, true);
-    }
+    if (event === "PASSWORD_RECOVERY") onRecovery();
   });
 
-  // Fallback: if no PASSWORD_RECOVERY event fires shortly after load,
-  // the link was likely already used, expired, or malformed.
-  setTimeout(function () {
-    if (!recoveryReady) showOnly(invalidState, true);
-  }, 4000);
+  // Current links (send-email hook): ?token_hash=...&type=recovery. The token is verified here,
+  // so a mail scanner that merely opens the link cannot use it up.
+  var params = new URLSearchParams(window.location.search);
+  var tokenHash = params.get("token_hash");
+
+  if (tokenHash) {
+    // Remove the one-time token from the address bar right away.
+    params.delete("token_hash");
+    params.delete("type");
+    var qs = params.toString();
+    window.history.replaceState(null, "", window.location.pathname + (qs ? "?" + qs : "") + window.location.hash);
+
+    client.auth
+      .verifyOtp({ token_hash: tokenHash, type: "recovery" })
+      .then(function (res) {
+        if (res.error || !res.data || !res.data.session) {
+          console.warn("verifyOtp failed:", res.error && res.error.message);
+          showOnly(invalidState, true);
+          return;
+        }
+        if (!recoveryReady) onRecovery();
+      })
+      .catch(function (err) {
+        console.warn("verifyOtp threw:", err);
+        showOnly(invalidState, true);
+      });
+  } else {
+    // Fallback: if no PASSWORD_RECOVERY event fires shortly after load,
+    // the link was likely already used, expired, or malformed.
+    setTimeout(function () {
+      if (!recoveryReady) showOnly(invalidState, true);
+    }, 4000);
+  }
 
   form.addEventListener("submit", async function (e) {
     e.preventDefault();

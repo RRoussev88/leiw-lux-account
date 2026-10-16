@@ -1,182 +1,66 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'none'; script-src 'self' 'sha256-2HfhiyiQyaoceHPGSt7JYV+uiqkhMBa2/soSJobvJgw='; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'self'"
-    />
-    <meta name="referrer" content="same-origin" />
-    <title>Léiw Lux – Apprendre le luxembourgeois</title>
-    <meta
-      name="description"
-      content="Léiw Lux est une application pour apprendre le luxembourgeois à votre rythme : leçons, exercices, séries quotidiennes et classement entre amis."
-    />
-    <link rel="canonical" href="https://leiwlux.com/" />
-    <link rel="alternate" hreflang="fr" href="https://leiwlux.com/fr/" />
-    <link rel="alternate" hreflang="en" href="https://leiwlux.com/en/" />
-    <link rel="alternate" hreflang="de" href="https://leiwlux.com/de/" />
-    <link rel="alternate" hreflang="lb" href="https://leiwlux.com/lb/" />
-    <link rel="alternate" hreflang="x-default" href="https://leiwlux.com/" />
-    <link rel="icon" href="/favicon.ico" sizes="48x48" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/img/favicon-32.png"
-    />
-    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
-    <meta name="theme-color" content="#F7F1E1" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Léiw Lux" />
-    <meta
-      property="og:title"
-      content="Léiw Lux – Apprendre le luxembourgeois"
-    />
-    <meta
-      property="og:description"
-      content="Léiw Lux est une application pour apprendre le luxembourgeois à votre rythme : leçons, exercices, séries quotidiennes et classement entre amis."
-    />
-    <meta property="og:url" content="https://leiwlux.com/" />
-    <meta
-      property="og:image"
-      content="https://leiwlux.com/assets/img/og-image.png"
-    />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <script>
-      (function () {
-        var L = ["fr", "en", "de", "lb"],
-          w = window.location,
-          s = w.search,
-          h = w.hash;
-        if (
-          /[#&](access_token|refresh_token|error|error_code|error_description|type)=/.test(
-            h,
-          ) ||
-          /[?&](code|token_hash|error|error_code)=/.test(s)
-        ) {
-          w.replace("/password/" + s + h);
-          return;
-        }
-        var p = null,
-          m = /[?&]lang=(fr|en|de|lb)(&|$)/.exec(s);
-        if (m) p = m[1];
-        if (!p) {
-          try {
-            var v = localStorage.getItem("ll_lang");
-            if (L.indexOf(v) > -1) p = v;
-          } catch (e) {}
-        }
-        if (!p) {
-          var n =
-            navigator.languages && navigator.languages.length
-              ? navigator.languages
-              : [navigator.language || ""];
-          for (var i = 0; i < n.length && !p; i++) {
-            var c = String(n[i]).toLowerCase().split("-")[0];
-            if (c === "ltz") c = "lb";
-            if (L.indexOf(c) > -1) p = c;
-          }
-        }
-        if (p) w.replace("/" + p + "/" + s + h);
-      })();
-    </script>
-    <link rel="stylesheet" href="/assets/css/site.css" />
-  </head>
-  <body data-page="home">
-    <a class="skip-link" href="#main">Aller au contenu</a>
-    <div class="flag-band" aria-hidden="true"></div>
-    <header class="site-header">
-      <div class="wrap bar">
-        <a class="brand" href="/fr/">
-          <img src="/assets/img/logo-96.png" width="40" height="40" alt="" />
-          <span>Léiw Lux</span>
-        </a>
-        <nav class="lang" aria-label="Langue">
-          <ul>
-            <li>
-              <a
-                href="/fr/"
-                hreflang="fr"
-                lang="fr"
-                data-lang="fr"
-                aria-label="Français"
-                title="Français"
-                aria-current="true"
-                >FR</a
-              >
-            </li>
-            <li>
-              <a
-                href="/en/"
-                hreflang="en"
-                lang="en"
-                data-lang="en"
-                aria-label="English"
-                title="English"
-                >EN</a
-              >
-            </li>
-            <li>
-              <a
-                href="/de/"
-                hreflang="de"
-                lang="de"
-                data-lang="de"
-                aria-label="Deutsch"
-                title="Deutsch"
-                >DE</a
-              >
-            </li>
-            <li>
-              <a
-                href="/lb/"
-                hreflang="lb"
-                lang="lb"
-                data-lang="lb"
-                aria-label="Lëtzebuergesch"
-                title="Lëtzebuergesch"
-                >LB</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main id="main" class="wrap">
-      <section class="hero">
-        <div class="hero-text">
-          <h1 class="hero-title">Léiw Lux</h1>
-          <p class="hero-tagline">
-            Apprenez le luxembourgeois, un jour à la fois.
-          </p>
-          <p class="hero-lead">
-            Des leçons et des exercices à votre rythme, des séries quotidiennes
-            pour garder le cap et un classement entre amis.
-          </p>
-        </div>
-        <img
-          class="hero-mascot"
-          src="/assets/img/mascot-wave@2x.png"
-          srcset="
-            /assets/img/mascot-wave.png    179w,
-            /assets/img/mascot-wave@2x.png 358w
-          "
-          sizes="(min-width: 760px) 280px, 200px"
-          width="358"
-          height="544"
-          alt="La mascotte de Léiw Lux : un lion couronné qui salue de la patte."
-        />
-      </section>
-    </main>
-    <footer class="site-footer">
-      <div class="wrap">
-        <p>© 2026 Léiw Lux</p>
-      </div>
-    </footer>
-    <script src="/assets/js/site.js" defer></script>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-2HfhiyiQyaoceHPGSt7JYV+uiqkhMBa2/soSJobvJgw='; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'self'">
+<meta name="referrer" content="same-origin">
+<title>Léiw Lux – Apprendre le luxembourgeois</title>
+<meta name="description" content="Léiw Lux est une application pour apprendre le luxembourgeois à votre rythme : leçons, exercices, séries quotidiennes et classement entre amis.">
+<link rel="canonical" href="https://leiwlux.com/">
+<link rel="alternate" hreflang="fr" href="https://leiwlux.com/fr/">
+<link rel="alternate" hreflang="en" href="https://leiwlux.com/en/">
+<link rel="alternate" hreflang="de" href="https://leiwlux.com/de/">
+<link rel="alternate" hreflang="lb" href="https://leiwlux.com/lb/">
+<link rel="alternate" hreflang="x-default" href="https://leiwlux.com/">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#F7F1E1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Léiw Lux">
+<meta property="og:title" content="Léiw Lux – Apprendre le luxembourgeois">
+<meta property="og:description" content="Léiw Lux est une application pour apprendre le luxembourgeois à votre rythme : leçons, exercices, séries quotidiennes et classement entre amis.">
+<meta property="og:url" content="https://leiwlux.com/">
+<meta property="og:image" content="https://leiwlux.com/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script>(function(){var L=["fr","en","de","lb"],w=window.location,s=w.search,h=w.hash;if(/[#&](access_token|refresh_token|error|error_code|error_description|type)=/.test(h)||/[?&](code|token_hash|error|error_code)=/.test(s)){w.replace("/password/"+s+h);return}var p=null,m=/[?&]lang=(fr|en|de|lb)(&|$)/.exec(s);if(m)p=m[1];if(!p){try{var v=localStorage.getItem("ll_lang");if(L.indexOf(v)>-1)p=v}catch(e){}}if(!p){var n=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||""];for(var i=0;i<n.length&&!p;i++){var c=String(n[i]).toLowerCase().split("-")[0];if(c==="ltz")c="lb";if(L.indexOf(c)>-1)p=c}}if(p)w.replace("/"+p+"/"+s+h)})();</script>
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body data-page="home">
+<a class="skip-link" href="#main">Aller au contenu</a>
+<div class="flag-band" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/fr/">
+      <img src="/assets/img/logo-96.png" width="40" height="40" alt="">
+      <span>Léiw Lux</span>
+    </a>
+    <nav class="lang" aria-label="Langue"><ul><li><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr" aria-label="Français" title="Français" aria-current="true">FR</a></li><li><a href="/en/" hreflang="en" lang="en" data-lang="en" aria-label="English" title="English">EN</a></li><li><a href="/de/" hreflang="de" lang="de" data-lang="de" aria-label="Deutsch" title="Deutsch">DE</a></li><li><a href="/lb/" hreflang="lb" lang="lb" data-lang="lb" aria-label="Lëtzebuergesch" title="Lëtzebuergesch">LB</a></li></ul></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<section class="hero">
+  <div class="hero-text">
+    <h1 class="hero-title">Léiw Lux</h1>
+    <p class="hero-tagline">Apprenez le luxembourgeois, un jour à la fois.</p>
+    <p class="hero-lead">Des leçons et des exercices à votre rythme, des séries quotidiennes pour garder le cap et un classement entre amis.</p>
+  </div>
+  <img class="hero-mascot"
+       src="/assets/img/mascot-wave@2x.png"
+       srcset="/assets/img/mascot-wave.png 179w, /assets/img/mascot-wave@2x.png 358w"
+       sizes="(min-width: 760px) 280px, 200px"
+       width="358" height="544" alt="La mascotte de Léiw Lux : un lion couronné qui salue de la patte.">
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Léiw Lux</p>
+  </div>
+</footer>
+<script src="/assets/js/site.js" defer></script>
+</body>
 </html>
