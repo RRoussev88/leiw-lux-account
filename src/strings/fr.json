@@ -22,7 +22,21 @@
   "home": {
     "tagline": "Apprenez le luxembourgeois, un jour à la fois.",
     "lead": "Des leçons et des exercices à votre rythme, des séries quotidiennes pour garder le cap et un classement entre amis.",
-    "mascot_alt": "La mascotte de Léiw Lux : un lion couronné qui salue de la patte."
+    "mascot_alt": "La mascotte de Léiw Lux : un lion couronné qui salue de la patte.",
+    "soon_label": "Bientôt disponible sur",
+    "features_title": "Ce que vous trouverez dans l'application",
+    "f_lessons_title": "Leçons et exercices",
+    "f_lessons_body": "Vidéos, QCM, glisser-déposer, questions ouvertes, vocabulaire et grammaire : chaque leçon se pratique de plusieurs façons.",
+    "f_offline_title": "Hors connexion",
+    "f_offline_body": "Téléchargez des leçons pour apprendre sans réseau ; votre progression se synchronise ensuite.",
+    "f_streaks_title": "Séries quotidiennes",
+    "f_streaks_body": "Gardez le rythme jour après jour. Des jetons de gel protègent votre série si vous manquez une journée.",
+    "f_friends_title": "Amis et classement",
+    "f_friends_body": "Suivez vos amis et comparez vos progrès dans le classement.",
+    "f_languages_title": "Quatre langues",
+    "f_languages_body": "L'application s'utilise en français, en anglais, en allemand et en luxembourgeois.",
+    "who_title": "Pour qui ?",
+    "who_body": "Pour toutes les personnes qui vivent, travaillent ou étudient au Luxembourg, et pour celles qui aiment simplement cette langue."
   },
   "password": {
     "verifying_title": "Vérification du lien…",

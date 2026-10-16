@@ -129,3 +129,18 @@ input[type="password"], input[type="email"], input[type="text"] {
 .prose h2 { font-size: 1.25rem; margin-top: 2rem; }
 
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+
+/* Home: store placeholders and sections */
+.soon-label { margin: 1.75rem 0 0.5rem; font-size: 0.9rem; font-weight: 600; color: var(--muted); }
+.stores { display: flex; flex-wrap: wrap; gap: 0.6rem; list-style: none; margin: 0; padding: 0; }
+.stores li {
+  padding: 0.55rem 1.1rem; border: 2px dashed var(--field-border); border-radius: 12px;
+  color: var(--muted); font-weight: 600;
+}
+.section { margin-top: 3.5rem; }
+.section h2 { font-size: 1.5rem; line-height: 1.25; margin: 0 0 1.25rem; }
+.features { display: grid; gap: 1.75rem 2.5rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); list-style: none; margin: 0; padding: 0; }
+.features li { border-top: 3px solid var(--gold); padding-top: 0.75rem; }
+.features h3 { font-size: 1.1rem; margin: 0 0 0.35rem; }
+.features p { margin: 0; color: var(--muted); }
+.who-body { max-width: 46rem; font-size: 1.1rem; margin: 0; }

@@ -22,7 +22,21 @@
   "home": {
     "tagline": "Lerne Luxemburgisch, Tag für Tag.",
     "lead": "Lektionen und Übungen in deinem Tempo, tägliche Serien zum Dranbleiben und eine Bestenliste mit Freunden.",
-    "mascot_alt": "Das Maskottchen von Léiw Lux: ein gekrönter Löwe, der winkt."
+    "mascot_alt": "Das Maskottchen von Léiw Lux: ein gekrönter Löwe, der winkt.",
+    "soon_label": "Bald verfügbar auf",
+    "features_title": "Das erwartet dich in der App",
+    "f_lessons_title": "Lektionen und Übungen",
+    "f_lessons_body": "Videos, Multiple Choice, Drag-and-drop, offene Fragen, Vokabeln und Grammatik: Jede Lektion übst du auf mehrere Arten.",
+    "f_offline_title": "Auch ohne Netz",
+    "f_offline_body": "Lade Lektionen herunter und lerne offline; dein Fortschritt wird später synchronisiert.",
+    "f_streaks_title": "Tägliche Serien",
+    "f_streaks_body": "Bleib Tag für Tag dran. Einfrier-Token schützen deine Serie, wenn du einmal einen Tag verpasst.",
+    "f_friends_title": "Freunde und Bestenliste",
+    "f_friends_body": "Folge Freunden und vergleiche deinen Fortschritt in der Bestenliste.",
+    "f_languages_title": "Vier Sprachen",
+    "f_languages_body": "Die App gibt es auf Französisch, Englisch, Deutsch und Luxemburgisch.",
+    "who_title": "Für wen ist Léiw Lux?",
+    "who_body": "Für alle, die in Luxemburg leben, arbeiten oder studieren – und für alle, die die Sprache einfach mögen."
   },
   "password": {
     "verifying_title": "Link wird überprüft…",

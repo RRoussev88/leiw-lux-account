@@ -22,7 +22,21 @@
   "home": {
     "tagline": "Léiert Lëtzebuergesch, Dag fir Dag.",
     "lead": "Lektiounen an Übungen an Ärem eegenen Tempo, deeglech Serien fir drunzebleiwen an e Klassement mat Frënn.",
-    "mascot_alt": "D'Maskott vu Léiw Lux: e gekréinte Léiw, deen wénkt."
+    "mascot_alt": "D'Maskott vu Léiw Lux: e gekréinte Léiw, deen wénkt.",
+    "soon_label": "Geschwënn disponibel op",
+    "features_title": "Wat Dir an der App fannt",
+    "f_lessons_title": "Lektiounen an Übungen",
+    "f_lessons_body": "Videoen, Multiple Choice, Drag-and-drop, oppe Froen, Wuertschatz a Grammatik: All Lektioun kënnt Dir op verschidde Weeër üben.",
+    "f_offline_title": "Och ouni Netz",
+    "f_offline_body": "Luet Lektiounen erof a léiert offline; Äre Fortschrëtt gëtt duerno synchroniséiert.",
+    "f_streaks_title": "Deeglech Serien",
+    "f_streaks_body": "Bleift Dag fir Dag drun. Freeze-Tokens halen Är Serie um Lafen, wann Dir emol en Dag verpasst.",
+    "f_friends_title": "Frënn a Klassement",
+    "f_friends_body": "Folgt Frënn a vergläicht Äre Fortschrëtt am Klassement.",
+    "f_languages_title": "Véier Sprooche",
+    "f_languages_body": "D'App gëtt et op Franséisch, Englesch, Däitsch a Lëtzebuergesch.",
+    "who_title": "Fir wien ass Léiw Lux?",
+    "who_body": "Fir all déi, déi zu Lëtzebuerg liewen, schaffen oder studéieren – a fir all déi, déi d'Sprooch einfach gär hunn."
   },
   "password": {
     "verifying_title": "Link gëtt iwwerpréift…",

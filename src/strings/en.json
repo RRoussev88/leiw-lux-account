@@ -22,7 +22,21 @@
   "home": {
     "tagline": "Learn Luxembourgish, one day at a time.",
     "lead": "Lessons and exercises at your own pace, daily streaks to keep you going, and a leaderboard to share with friends.",
-    "mascot_alt": "The Léiw Lux mascot: a crowned lion waving."
+    "mascot_alt": "The Léiw Lux mascot: a crowned lion waving.",
+    "soon_label": "Coming soon on",
+    "features_title": "What you'll find in the app",
+    "f_lessons_title": "Lessons and exercises",
+    "f_lessons_body": "Videos, multiple choice, drag and drop, open questions, vocabulary and grammar: every lesson can be practised in several ways.",
+    "f_offline_title": "Learn offline",
+    "f_offline_body": "Download lessons to study without a connection; your progress syncs afterwards.",
+    "f_streaks_title": "Daily streaks",
+    "f_streaks_body": "Keep going day after day. Freeze tokens protect your streak if you miss a day.",
+    "f_friends_title": "Friends and leaderboard",
+    "f_friends_body": "Follow friends and compare your progress on the leaderboard.",
+    "f_languages_title": "Four languages",
+    "f_languages_body": "The app is available in French, English, German and Luxembourgish.",
+    "who_title": "Who is it for?",
+    "who_body": "For anyone who lives, works or studies in Luxembourg, and anyone who simply likes the language."
   },
   "password": {
     "verifying_title": "Verifying link…",
